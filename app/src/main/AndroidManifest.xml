@@ -20,7 +20,8 @@
         <activity android:name=".GuidelineActivity" />
         <activity android:name=".normal.RelativePositionActivity" />
         <activity android:name=".normal.MarginActivity" />
-        <activity android:name=".normal.CenterPositionActivity"></activity>
+        <activity android:name=".normal.CenterPositionActivity" />
+        <activity android:name=".normal.BiasActivity"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import zr.com.constraintdemo.normal.BiasActivity;
 import zr.com.constraintdemo.normal.CenterPositionActivity;
 import zr.com.constraintdemo.normal.MarginActivity;
 import zr.com.constraintdemo.normal.RelativePositionActivity;
@@ -16,6 +17,7 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
     private Button mRelativePositionButton;
     private Button mMarginButton;
     private Button mCenterPositionButton;
+    private Button mBiasButton;
 
     public static void launch(Context context) {
         Intent intent = new Intent();
@@ -35,12 +37,14 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
         mRelativePositionButton = (Button) findViewById(R.id.btn_relative_position);
         mMarginButton = (Button) findViewById(R.id.btn_margins);
         mCenterPositionButton = (Button) findViewById(R.id.btn_center);
+        mBiasButton = (Button) findViewById(R.id.btn_bias);
     }
 
     private void setListener() {
         mRelativePositionButton.setOnClickListener(this);
         mMarginButton.setOnClickListener(this);
         mCenterPositionButton.setOnClickListener(this);
+        mBiasButton.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +60,10 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.btn_center:
                 CenterPositionActivity.launch(this);
+                break;
+
+            case R.id.btn_bias:
+                BiasActivity.launch(this);
                 break;
         }
     }
