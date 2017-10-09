@@ -9,8 +9,10 @@ import android.widget.Button;
 
 import zr.com.constraintdemo.normal.BiasActivity;
 import zr.com.constraintdemo.normal.CenterPositionActivity;
+import zr.com.constraintdemo.normal.DimenActivity;
 import zr.com.constraintdemo.normal.MarginActivity;
 import zr.com.constraintdemo.normal.RelativePositionActivity;
+import zr.com.constraintdemo.normal.VisibilityActivity;
 
 public class NormalActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -18,6 +20,8 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
     private Button mMarginButton;
     private Button mCenterPositionButton;
     private Button mBiasButton;
+    private Button mVisibilityButton;
+    private Button mDimenButton;
 
     public static void launch(Context context) {
         Intent intent = new Intent();
@@ -38,6 +42,8 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
         mMarginButton = (Button) findViewById(R.id.btn_margins);
         mCenterPositionButton = (Button) findViewById(R.id.btn_center);
         mBiasButton = (Button) findViewById(R.id.btn_bias);
+        mVisibilityButton = (Button) findViewById(R.id.btn_visibility);
+        mDimenButton = (Button) findViewById(R.id.btn_dimen);
     }
 
     private void setListener() {
@@ -45,6 +51,8 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
         mMarginButton.setOnClickListener(this);
         mCenterPositionButton.setOnClickListener(this);
         mBiasButton.setOnClickListener(this);
+        mVisibilityButton.setOnClickListener(this);
+        mDimenButton.setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +72,14 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.btn_bias:
                 BiasActivity.launch(this);
+                break;
+
+            case R.id.btn_visibility:
+                VisibilityActivity.launch(this);
+                break;
+
+            case R.id.btn_dimen:
+                DimenActivity.launch(this);
                 break;
         }
     }

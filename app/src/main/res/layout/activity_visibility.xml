@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_visibility"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zr.com.constraintdemo.normal.VisibilityActivity">
+
+    <Button
+        android:id="@+id/btn_basic"
+        android:text="基准按钮"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_A"
+        android:text="A(距离左边10dp)"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/btn_basic"
+        app:layout_constraintTop_toBottomOf="@id/btn_basic"
+        android:layout_marginLeft="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_B"
+        android:text="B(距离左边50dp)"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/btn_A"
+        app:layout_constraintTop_toTopOf="@id/btn_A"
+        android:layout_marginLeft="50dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorAccent"
+        >
+        <Button
+            android:id="@+id/btn_1"
+            android:text="基准按钮"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_2"
+            android:text="距离左边10dp"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_1"
+            android:layout_marginLeft="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_3"
+            android:textAllCaps="false"
+            android:text="距离左边50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_2"
+            android:layout_alignTop="@id/btn_2"
+            android:layout_marginLeft="50dp"
+            />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

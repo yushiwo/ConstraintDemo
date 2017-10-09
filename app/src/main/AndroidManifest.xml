@@ -21,7 +21,9 @@
         <activity android:name=".normal.RelativePositionActivity" />
         <activity android:name=".normal.MarginActivity" />
         <activity android:name=".normal.CenterPositionActivity" />
-        <activity android:name=".normal.BiasActivity"></activity>
+        <activity android:name=".normal.BiasActivity" />
+        <activity android:name=".normal.VisibilityActivity" />
+        <activity android:name=".normal.DimenActivity"></activity>
     </application>
 
 </manifest>
