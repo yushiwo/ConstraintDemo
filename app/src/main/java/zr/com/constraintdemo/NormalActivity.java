@@ -9,8 +9,10 @@ import android.widget.Button;
 
 import zr.com.constraintdemo.normal.BiasActivity;
 import zr.com.constraintdemo.normal.CenterPositionActivity;
+import zr.com.constraintdemo.normal.ChainActivity;
 import zr.com.constraintdemo.normal.DimenActivity;
 import zr.com.constraintdemo.normal.MarginActivity;
+import zr.com.constraintdemo.normal.RatioActivity;
 import zr.com.constraintdemo.normal.RelativePositionActivity;
 import zr.com.constraintdemo.normal.VisibilityActivity;
 
@@ -22,6 +24,8 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
     private Button mBiasButton;
     private Button mVisibilityButton;
     private Button mDimenButton;
+    private Button mRatioButton;
+    private Button mChainButton;
 
     public static void launch(Context context) {
         Intent intent = new Intent();
@@ -44,6 +48,8 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
         mBiasButton = (Button) findViewById(R.id.btn_bias);
         mVisibilityButton = (Button) findViewById(R.id.btn_visibility);
         mDimenButton = (Button) findViewById(R.id.btn_dimen);
+        mRatioButton = (Button) findViewById(R.id.btn_ratio);
+        mChainButton = (Button) findViewById(R.id.btn_chain);
     }
 
     private void setListener() {
@@ -53,6 +59,8 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
         mBiasButton.setOnClickListener(this);
         mVisibilityButton.setOnClickListener(this);
         mDimenButton.setOnClickListener(this);
+        mRatioButton.setOnClickListener(this);
+        mChainButton.setOnClickListener(this);
     }
 
     @Override
@@ -80,6 +88,14 @@ public class NormalActivity extends AppCompatActivity implements View.OnClickLis
 
             case R.id.btn_dimen:
                 DimenActivity.launch(this);
+                break;
+
+            case R.id.btn_ratio:
+                RatioActivity.launch(this);
+                break;
+
+            case R.id.btn_chain:
+                ChainActivity.launch(this);
                 break;
         }
     }
