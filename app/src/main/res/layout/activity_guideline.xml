@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_guideline"
     android:layout_width="match_parent"
@@ -10,4 +11,65 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="zr.com.constraintdemo.GuidelineActivity">
 
-</RelativeLayout>
+    <!-- 垂直Guideline -->
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:text="GuideLine左边"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_1"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:text="GuideLine右边"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_2"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!-- 垂直Guideline -->
+    <android.support.constraint.Guideline
+        android:id="@+id/h_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <Button
+        android:text="Guideline上面"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/h_guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:text="Guideline下面"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/h_guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>
