@@ -18,6 +18,7 @@
 
     <Button
         android:text="普通margin属性设置"
+        android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@id/btn_1"
@@ -35,14 +36,15 @@
         />
 
     <Button
-        android:text="普通margin属性设置"
+        android:text="gone margin属性设置"
+        android:textAllCaps="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@id/btn_2"
-        app:layout_constraintTop_toBottomOf="@id/btn_2"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="16dp"
         app:layout_goneMarginLeft="80dp"
-        app:layout_goneMarginTop="80dp"
+        android:layout_marginTop="100dp"
         />
 
 </android.support.constraint.ConstraintLayout>
