@@ -42,4 +42,16 @@
         android:layout_marginLeft="16dp"
         android:textAllCaps="false"
         android:id="@+id/btn_guideline" />
+
+    <Button
+        android:text="自定义View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_guideline"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:textAllCaps="false"
+        android:id="@+id/btn_custom_view" />
 </android.support.constraint.ConstraintLayout>

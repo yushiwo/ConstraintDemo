@@ -7,7 +7,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button mNormalButton, mConstraintSetButton, mGuidelineButton;
+    private Button mNormalButton, mConstraintSetButton, mGuidelineButton, mCustomViewButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mNormalButton = (Button) findViewById(R.id.btn_normal);
         mConstraintSetButton = (Button) findViewById(R.id.btn_constraintset);
         mGuidelineButton = (Button) findViewById(R.id.btn_guideline);
+        mCustomViewButton = (Button) findViewById(R.id.btn_custom_view);
     }
 
     private void setListener() {
         mNormalButton.setOnClickListener(this);
         mConstraintSetButton.setOnClickListener(this);
         mGuidelineButton.setOnClickListener(this);
+        mCustomViewButton.setOnClickListener(this);
     }
 
     @Override
@@ -42,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_guideline:
                 GuidelineActivity.launch(this);
+                break;
+
+            case R.id.btn_custom_view:
+                CustomActivity.launch(this);
                 break;
         }
     }
