@@ -3,6 +3,7 @@ package zr.com.constraintdemo;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v7.app.AppCompatActivity;
@@ -51,28 +52,30 @@ public class ConstraintSetActivity extends AppCompatActivity implements View.OnC
     public void onApplyClick() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             TransitionManager.beginDelayedTransition(constraintLayout);
-
-            applyConstraintSet.setMargin(R.id.btn_1, ConstraintSet.START, 0);
-            applyConstraintSet.setMargin(R.id.btn_1, ConstraintSet.END, 0);
-            applyConstraintSet.setMargin(R.id.btn_2, ConstraintSet.START, 0);
-            applyConstraintSet.setMargin(R.id.btn_2, ConstraintSet.END, 0);
-            applyConstraintSet.setMargin(R.id.btn_3, ConstraintSet.START, 0);
-            applyConstraintSet.setMargin(R.id.btn_3, ConstraintSet.END, 0);
-
-
-            applyConstraintSet.centerHorizontally(R.id.btn_1, R.id.activity_constraint_set);
-            applyConstraintSet.centerHorizontally(R.id.btn_2, R.id.activity_constraint_set);
-            applyConstraintSet.centerHorizontally(R.id.btn_3, R.id.activity_constraint_set);
-            applyConstraintSet.applyTo(constraintLayout);
         }
+
+        applyConstraintSet.setMargin(R.id.btn_1, ConstraintSet.START, 0);
+        applyConstraintSet.setMargin(R.id.btn_1, ConstraintSet.END, 0);
+        applyConstraintSet.setMargin(R.id.btn_2, ConstraintSet.START, 0);
+        applyConstraintSet.setMargin(R.id.btn_2, ConstraintSet.END, 0);
+        applyConstraintSet.setMargin(R.id.btn_3, ConstraintSet.START, 0);
+        applyConstraintSet.setMargin(R.id.btn_3, ConstraintSet.END, 0);
+
+
+        applyConstraintSet.centerHorizontally(R.id.btn_1, R.id.activity_constraint_set);
+        applyConstraintSet.centerHorizontally(R.id.btn_2, R.id.activity_constraint_set);
+        applyConstraintSet.centerHorizontally(R.id.btn_3, R.id.activity_constraint_set);
+        applyConstraintSet.applyTo(constraintLayout);
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void onResetClick() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             TransitionManager.beginDelayedTransition(constraintLayout);
-            resetConstraintSet.applyTo(constraintLayout);
         }
+        resetConstraintSet.applyTo(constraintLayout);
+
     }
 
     @Override
