@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="7.5dp"
+    android:paddingBottom="7.5dp"
+    android:paddingLeft="12.5dp"
+    android:paddingRight="12.5dp"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:id="@+id/tv_parent_category_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="少儿编程"
+        android:textSize="15sp"
+        android:textColor="#333333"
+        app:layout_constraintBottom_toBottomOf="@id/img_icon"
+        app:layout_constraintLeft_toRightOf="@id/img_icon"
+        app:layout_constraintTop_toTopOf="@id/img_icon" />
+
+    <!-- 子类目布局开始 -->
+    <Button
+        android:id="@+id/btn_one"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="A"
+        app:layout_constraintTop_toBottomOf="@id/img_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_two" />
+
+    <Button
+        android:id="@+id/btn_two"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="B"
+        app:layout_constraintLeft_toRightOf="@id/btn_one"
+        app:layout_constraintRight_toLeftOf="@+id/btn_three"
+        app:layout_constraintTop_toTopOf="@id/btn_one" />
+
+    <Button
+        android:id="@+id/btn_three"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="C"
+        app:layout_constraintLeft_toRightOf="@id/btn_two"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_two" />
+
+    <!-- 第二排 -->
+    <Button
+        android:id="@+id/btn_four"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="D"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btn_five"
+        app:layout_constraintTop_toBottomOf="@id/btn_one" />
+
+    <Button
+        android:id="@+id/btn_five"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="E"
+        app:layout_constraintLeft_toRightOf="@+id/btn_four"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_four" />
+
+
+</android.support.constraint.ConstraintLayout>
+
